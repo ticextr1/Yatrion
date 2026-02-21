@@ -1,38 +1,199 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hatsel Games | Ana Sayfa</title>
+    <title>Yatrion - Geleceğin Uygulaması</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#3b82f6',
+                            glow: '#60a5fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #888888;
-        }
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass-nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .gradient-text { background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Hatsel Games</h1>
-        <p>Yeni web sitemiz yapım aşamasında. Çok yakında buradayız.</p>
-    </div>
+<body class="antialiased selection:bg-brand-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="text-3xl font-bold tracking-tighter text-white">YATRI<span class="text-brand-accent">ON</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#ozellikler" class="text-gray-300 hover:text-white transition">Özellikler</a>
+                    <a href="#yorumlar" class="text-gray-300 hover:text-white transition">Kullanıcı Yorumları</a>
+                    <a href="#indir" class="text-gray-300 hover:text-white transition">İndir</a>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 text-gray-300 hover:text-white bg-brand-light px-3 py-1.5 rounded-lg border border-gray-700">
+                            <i class="fa-solid fa-globe text-sm"></i>
+                            <span>TR</span>
+                            <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-brand-light border border-gray-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-t-lg">Türkçe</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Norsk</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Русский</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-b-lg">Nederlands</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-brand-dark to-brand-dark -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Dijital Dünyadaki <br>
+                <span class="gradient-text">Yeni Gücünüz.</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+                Yatrion ile sınırları kaldırın. Günlük işlerinizi hızlandırın, zamandan tasarruf edin ve kusursuz tasarımın keyfini çıkarın. Her şey tek bir dokunuş uzağınızda.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#" class="flex items-center justify-center w-64 bg-white text-black px-6 py-4 rounded-2xl hover:bg-gray-200 transition duration-300 transform hover:scale-105">
+                    <i class="fa-brands fa-apple text-3xl mr-3"></i>
+                    <div class="text-left">
+                        <span class="block text-xs uppercase font-semibold">App Store'dan</span>
+                        <span class="block text-lg font-bold leading-none">İndirin</span>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center justify-center w-64 bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 text-white px-6 py-4 rounded-2xl hover:from-gray-700 hover:to-gray-800 transition duration-300 transform hover:scale-105">
+                    <i class="fa-brands fa-google-play text-3xl mr-3 text-brand-glow"></i>
+                    <div class="text-left">
+                        <span class="block text-xs uppercase text-gray-400 font-semibold">Google Play'DEN</span>
+                        <span class="block text-lg font-bold leading-none">Alın</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-20 relative mx-auto max-w-4xl">
+                <div class="rounded-3xl bg-brand-light p-2 border border-gray-800 shadow-2xl relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent z-10 rounded-3xl pointer-events-none"></div>
+                    <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=1200&q=80" alt="Yatrion App Interface" class="rounded-2xl opacity-70">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ozellikler" class="py-24 bg-brand-light/30 border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold">Neden <span class="text-brand-accent">Yatrion?</span></h2>
+                <p class="mt-4 text-gray-400">Çünkü sıradan olanla yetinmiyoruz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-brand-dark p-8 rounded-2xl border border-gray-800 transition duration-300">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-xl flex items-center justify-center mb-6 text-brand-glow">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">İnanılmaz Hızlı</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Gecikmelere veda edin. Özel optimize edilmiş altyapımız sayesinde saniyeler içinde işlemlerinizi tamamlayın.</p>
+                </div>
+                <div class="feature-card bg-brand-dark p-8 rounded-2xl border border-gray-800 transition duration-300">
+                    <div class="w-14 h-14 bg-purple-900/50 rounded-xl flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Üst Düzey Güvenlik</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Verileriniz uçtan uca şifrelenir. Gizliliğiniz bizim için her şeyden daha önemli.</p>
+                </div>
+                <div class="feature-card bg-brand-dark p-8 rounded-2xl border border-gray-800 transition duration-300">
+                    <div class="w-14 h-14 bg-green-900/50 rounded-xl flex items-center justify-center mb-6 text-green-400">
+                        <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kusursuz Tasarım</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Göz yormayan dark tema ve sezgisel kullanıcı arayüzü ile uygulamanın içinde kaybolacaksınız.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="yorumlar" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold">Kullanıcılar <span class="gradient-text">Ne Diyor?</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Yatrion'u indirmeden önce hayatım ne kadar zormuş fark etmemiştim. Arayüz o kadar akıcı ki, saatlerce kullansam bile sıkılmıyorum. Tek kelimeyle mükemmel."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center font-bold text-white mr-3">M</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Mert Yılmaz</h4>
+                            <span class="text-xs text-gray-500">Premium Kullanıcı</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Uygulamanın dark teması şahane. İngilizce ve Rusça dil seçenekleri arasında anında geçiş yapabilmesi işimde bana çok zaman kazandırdı. Kesinlikle tavsiye ederim."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-orange-400 flex items-center justify-center font-bold text-white mr-3">E</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Elif Kaya</h4>
+                            <span class="text-xs text-gray-500">Girişimci</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-700 relative">
+                    <div class="text-yellow-400 mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6">"Gördüğüm en vizyoner uygulamalardan biri. Sadece tasarımı için bile indirilir. Yapanların ellerine sağlık, 5 yıldızı sonuna kadar hak ediyor."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center font-bold text-white mr-3">B</div>
+                        <div>
+                            <h4 class="font-bold text-sm">Burak Demir</h4>
+                            <span class="text-xs text-gray-500">Yazılım Mühendisi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-6">YATRI<span class="text-brand-accent">ON</span></h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-500 hover:text-white text-2xl transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white text-2xl transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white text-2xl transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">
+                &copy; 2026 Yatrion App. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
